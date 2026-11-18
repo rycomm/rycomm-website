@@ -1,1 +1,42 @@
-
+[
+  {
+    "title": "Pathways & Support",
+    "description": "Ladder rack, J-hooks, conduit sleeves, and cable trays.",
+    "image": "https://images.unsplash.com/photo-1785682117481-8e7121f49a57?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "Copper & Coax Cabling",
+    "description": "Cat6/6A horizontal runs, risers, and low-loss RF coax.",
+    "image": "https://plus.unsplash.com/premium_photo-1764705711135-3719ef7685ec?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "Fiber Optic Infrastructure",
+    "description": "Backbone pulls, termination, fusion splicing, and splice trays.",
+    "image": "https://images.unsplash.com/photo-1594915440248-1e419eba6611?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "MDF / IDF Closet Buildouts",
+    "description": "Racks, cabinets, patch panels, grounding, and wire dressing.",
+    "image": "https://plus.unsplash.com/premium_photo-1764695613425-3d23cfa22150?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "RF & DAS Components",
+    "description": "BDAs, repeaters, splitters, couplers, and antenna arrays.",
+    "image": "https://images.unsplash.com/photo-1664398253798-e2ff5ef68b6f?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "Active Rack & Headend Gear",
+    "description": "Switches, UPS backups, power supplies, and panel enclosures.",
+    "image": "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "Door & Intrusion Hardware",
+    "description": "Strikes, maglocks, door contacts, REX devices, and motion sensors.",
+    "image": "https://plus.unsplash.com/premium_photo-1751302789666-6a20b30ffaba?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  },
+  {
+    "title": "CCTV & Ceiling Devices",
+    "description": "Cameras, brackets, Wi-Fi WAPs, and overhead-mounted equipment.",
+    "image": "https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+  }
+]

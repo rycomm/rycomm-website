@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation Services | RyComm Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../styles/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body data-page="services" class="font-sans text-slate-800 min-h-screen flex flex-col relative">
 
+  <!-- Particles Background Container -->
+  <div id="particles-js"></div>
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-grow relative z-10 page-fade">
+
+    <!-- Page Hero -->
+    <div class="hero-page min-h-[40vh] flex items-center py-12">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">Field Execution Partner</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">Installation Services</h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">Specialized field execution for low-voltage, wireless, public safety DAS, and physical security.</p>
+      </div>
+    </div>
+
+    <!-- Intro Header -->
+    <div class="bg-white border-b border-slate-200 py-10">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-black text-primary mb-3">Core Installation Capabilities</h2>
+        <p class="text-slate-600 text-lg">Elite field execution partner for GCs and Prime Integrators—compliant, inspection-ready installs on schedule.</p>
+      </div>
+    </div>
+
+    <!-- Services Grid (Loaded from data/services.json) -->
+    <div class="py-12 md:py-16 max-w-6xl mx-auto px-4 relative z-10">
+      <div id="services-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+
+      <!-- Bid Support Banner -->
+      <div class="mt-12 bg-primary text-white p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border-l-4 border-accent relative z-10">
+        <div class="max-w-xl text-center md:text-left">
+          <h3 class="text-2xl md:text-3xl font-black mb-3">Need an Installation Partner for an Upcoming Bid?</h3>
+          <p class="text-slate-300 text-lg">Our leadership team is ready to review your project specs, drawings, and scope sheets.</p>
+        </div>
+        <a href="contact.html" data-route="contact" class="shrink-0 px-8 py-4 text-sm font-bold bg-accent text-primary hover:bg-white transition-colors uppercase tracking-wide">Contact Leadership</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../scripts/navigation.js"></script>
+  <script src="../scripts/particles.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const grid = document.getElementById('services-grid');
+      if (!grid) return;
+
+      try {
+        const res = await fetch('../data/services.json');
+        if (!res.ok) return;
+        const services = await res.json();
+
+        grid.innerHTML = services.map(service => {
+          const badgeClass = service.badgeType === 'danger'
+            ? 'bg-red-50 text-red-700 border-red-100'
+            : 'bg-slate-100 text-slate-600 border-slate-200';
+
+          const bulletsHtml = service.bullets.map(b => `
+            <li class="flex gap-3"><span class="text-accent font-bold">›</span> <span><strong class="text-primary">${b.label}:</strong> ${b.text}</span></li>
+          `).join('');
+
+          return `
+            <article class="bg-white border border-slate-200 shadow-sm hover:border-secondary transition-colors flex flex-col h-full">
+              <div class="p-6 pb-4 border-b border-slate-100 flex-grow">
+                <div class="flex justify-between items-start gap-4 mb-4">
+                  <h3 class="text-2xl font-bold text-primary leading-tight">${service.title}</h3>
+                  <span class="text-[10px] font-bold uppercase tracking-wider ${badgeClass} px-3 py-1 border shrink-0">${service.badge}</span>
+                </div>
+                <p class="text-slate-600 leading-relaxed">${service.summary}</p>
+              </div>
+              <details class="group">
+                <summary class="flex justify-between items-center px-6 py-3 text-sm font-bold text-secondary hover:bg-slate-50 transition-colors uppercase tracking-wide bg-surface">
+                  View Scope Details
+                  <svg class="chev w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-6 pb-6 pt-2 bg-surface border-t border-slate-100">
+                  <ul class="space-y-3 text-sm text-slate-700">${bulletsHtml}</ul>
+                </div>
+              </details>
+            </article>
+          `;
+        }).join('');
+      } catch (err) {
+        console.error('Could not load services:', err);
+      }
+    });
+  </script>
+</body>
+</html>

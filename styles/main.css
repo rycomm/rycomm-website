@@ -1,1 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+}
+
+/* Custom Input Autofill styling for dark borders */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+/* ------------------------------------------- */
+/* CAROUSEL CSS: Hidden Scrollbar & Chevrons   */
+/* ------------------------------------------- */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0B1528;
+  color: #00A8E8;
+  border: 1px solid rgba(0, 168, 232, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.carousel-nav-btn:hover {
+  background: #00A8E8;
+  color: #0B1528;
+}
+.carousel-container:hover .carousel-nav-btn {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .carousel-nav-btn {
+    display: none !important;
+  }
+}
+
+/* Particles.js Background Container */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background-color: #F4F7FA;
+}
+
+/* Hero Banners */
+.hero-home {
+  background-image: url('https://plus.unsplash.com/premium_photo-1740363268539-cd9093c3b5d1?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-page {
+  background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 30%;
+  position: relative;
+}
+.hero-home::before,
+.hero-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(11, 21, 40, 0.95) 0%, rgba(11, 21, 40, 0.85) 50%, rgba(0, 85, 164, 0.4) 100%);
+  z-index: 1;
+}
+
+/* Page Fade-In Animation */
+.page-fade {
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nav Tabs - Underline Highlight Styling */
+.tab {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.tab:hover,
+.tab.on {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-decoration-color: #00A8E8 !important;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  font-weight: 700;
+}
+
+/* Corporate Cards */
+.tech-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 3px solid transparent;
+}
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-top: 3px solid #00A8E8;
+}
+
+/* Accordions */
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary .chev {
+  transform: rotate(180deg);
+}
+.chev {
+  transition: transform 0.2s ease;
+}
+
+/* Button Jiggle Animation */
+@keyframes jiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+.hover-jiggle:hover,
+.hover-jiggle:active {
+  animation: jiggle 0.3s ease-in-out;
+}

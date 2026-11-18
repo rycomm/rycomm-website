@@ -1,1 +1,82 @@
-
+[
+  {
+    "title": "Structured Cabling Infrastructure",
+    "badge": "Low-Voltage",
+    "badgeType": "default",
+    "summary": "End-to-end copper, fiber, pathway, and head-end installation with full testing and closeout.",
+    "bullets": [
+      { "label": "Copper", "text": "Cat5e/6/6A install, terminate, label, certify" },
+      { "label": "Fiber", "text": "SM/MM, fusion splice, OTDR testing" },
+      { "label": "Pathways", "text": "J-hooks, trays, ladder racks, sleeves" },
+      { "label": "Head End / MDF / IDF", "text": "Racks, cabinets, patch panels, UPS" },
+      { "label": "Electronics", "text": "WAPs, switches, IoT install & patch" },
+      { "label": "Closeout", "text": "Test reports, as-builts, photo docs" }
+    ]
+  },
+  {
+    "title": "Commercial & Enterprise DAS",
+    "badge": "RF / Wireless",
+    "badgeType": "default",
+    "summary": "Coaxial, fiber, hybrid power, passive/active RF, antennas, and certified testing.",
+    "bullets": [
+      { "label": "Coax / Fiber / Power", "text": "Plenum coax, composite fiber-power" },
+      { "label": "RF Components", "text": "Splitters, MSUs, RUs, hubs" },
+      { "label": "Antennas", "text": "Indoor/outdoor to iBwave layouts" },
+      { "label": "Headend", "text": "BDAs, UPS, NEMA power units" },
+      { "label": "Testing", "text": "PIM, line sweeps, DTF, OTDR" },
+      { "label": "Closeout", "text": "Sweep packets, PIM reports, as-builts" }
+    ]
+  },
+  {
+    "title": "Public Safety DAS & ERRCS",
+    "badge": "Life Safety",
+    "badgeType": "danger",
+    "summary": "Code-compliant emergency responder coverage with fire-rated components and inspection support.",
+    "bullets": [
+      { "label": "Codes", "text": "AHJ, NFPA 72/1221/1225, IFC" },
+      { "label": "Components", "text": "Fire-rated cabling, red NEMA, dedicated UPS" },
+      { "label": "Antennas", "text": "Outdoor donor & indoor service" },
+      { "label": "Pre-Testing", "text": "Sweeps, spectrum, Fire Marshal support" },
+      { "label": "Closeout", "text": "Certified packets, grid-test logs" }
+    ]
+  },
+  {
+    "title": "2-Way Radio Systems & BDA",
+    "badge": "RF / Wireless",
+    "badgeType": "default",
+    "summary": "BDA, repeater, antenna, and coaxial installs with full sweep and commissioning support.",
+    "bullets": [
+      { "label": "BDA / Repeaters", "text": "Mount, power, ground" },
+      { "label": "Antennas", "text": "Outdoor directional & indoor distribution" },
+      { "label": "Coax / Passives", "text": "Low-loss coax, splitters, surge protection" },
+      { "label": "Sweeps", "text": "Line sweeps, DTF, live tuning" },
+      { "label": "Closeout", "text": "Sweep packets, as-builts, photo logs" }
+    ]
+  },
+  {
+    "title": "Access Control & Security",
+    "badge": "Physical Security",
+    "badgeType": "default",
+    "summary": "Door hardware, headend buildouts, security cabling, continuity testing for commissioning.",
+    "bullets": [
+      { "label": "Door Hardware", "text": "Readers, maglocks, strikes, REX, DPS" },
+      { "label": "Headend", "text": "Panel mount, wire routing, power, terminations" },
+      { "label": "Cabling", "text": "Composite pulls, lock power, contacts" },
+      { "label": "Testing", "text": "Continuity, wire mapping, voltage checks" },
+      { "label": "Closeout", "text": "Door schedules, elevation photos, as-builts" }
+    ]
+  },
+  {
+    "title": "CCTV & Video Surveillance",
+    "badge": "Physical Security",
+    "badgeType": "default",
+    "summary": "Camera mounting, NVR buildouts, IP drops, FOV alignment, and certified testing.",
+    "bullets": [
+      { "label": "Cameras", "text": "Dome, bullet, PTZ, thermal, multi-sensor" },
+      { "label": "NVR / Server", "text": "Rack mount, dress-in, power" },
+      { "label": "Cabling", "text": "Cat6/6A drops, fiber, PoE" },
+      { "label": "FOV", "text": "Lens and angle per security plans" },
+      { "label": "Closeout", "text": "Camera plans, IP schedules, photo logs" }
+    ]
+  }
+]

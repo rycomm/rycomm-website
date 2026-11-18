@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | RyComm Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../styles/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body data-page="about" class="font-sans text-slate-800 min-h-screen flex flex-col relative">
 
+  <!-- Particles Background Container -->
+  <div id="particles-js"></div>
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-grow relative z-10 page-fade">
+
+    <!-- Page Hero -->
+    <div class="hero-page min-h-[40vh] flex items-center py-12" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop');">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">About Us</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">Built for the Field</h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">Specialized low-voltage and infrastructure installation partner serving Dallas–Fort Worth and greater Texas.</p>
+      </div>
+    </div>
+
+    <!-- Who We Are & Story -->
+    <div class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-black text-primary mb-6">Who We Are</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+            Founded by Jon Juhl and Stephen Johnson, our leadership brings over 30 years of combined, hands-on experience executing complex, mission-critical installations for Fortune 500 campuses, international airports, and major healthcare facilities. We specialize in Structured Cabling, Access Control, CCTV, Security, and Commercial/Public Safety DAS.
+          </p>
+          
+          <h2 class="text-3xl md:text-4xl font-black text-primary mb-6">Our Story</h2>
+          <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+            <p>We started RyComm Technologies for two simple reasons: a genuine passion for the craft and a shared frustration with how the industry often operates. After decades of watching larger firms overpromise and fail to connect planning with field execution, we decided to build something better.</p>
+            <p>By combining hands-on technical background with high-level project management, we created a specialized installation company designed to eliminate inefficiencies and protect our clients’ budgets. Clients deserve a partner who communicates honestly and cares about the final product as much as they do.</p>
+          </div>
+        </div>
+        
+        <!-- Sticky Contact Leadership Box -->
+        <div class="bg-surface border border-slate-200 p-6 lg:p-8 sticky top-28 shadow-sm">
+          <h3 class="text-2xl font-black text-primary mb-2">Contact Leadership</h3>
+          <p class="text-slate-600 mb-6">Project inquiries, drawings review, or bid support.</p>
+          
+          <div class="space-y-4">
+            <a href="mailto:info@rycommtechnologies.com" class="flex items-start gap-4 group">
+              <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:border-secondary transition-colors">
+                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-0.5">Email</p>
+                <p class="text-base font-bold text-primary group-hover:text-secondary transition-colors">info@rycommtechnologies.com</p>
+                <p class="text-xs text-slate-500 mt-0.5">Specs, drawings & scope sheets</p>
+              </div>
+            </a>
+            
+            <div class="w-full h-px bg-slate-200"></div>
+            
+            <a href="tel:+14692157576" class="flex items-start gap-4 group">
+              <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:border-secondary transition-colors">
+                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-0.5">Phone</p>
+                <p class="text-base font-bold text-primary group-hover:text-secondary transition-colors">469-215-7576</p>
+                <p class="text-xs text-slate-500 mt-0.5">Dallas–Fort Worth & greater Texas</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The RyComm Standard -->
+    <div class="bg-primary text-white py-12 md:py-16 border-t-4 border-accent border-b border-white/10 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-black mb-4">The RyComm Standard</h2>
+          <p class="text-slate-400 max-w-2xl mx-auto">Foundational principles on every job site and client interaction.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="border border-white/10 p-6 hover:bg-white/5 transition-colors">
+            <div class="text-accent font-black text-2xl mb-4 border-b border-white/20 pb-3 inline-block">01</div>
+            <h3 class="text-xl font-bold text-white mb-3">Strict Safety & Compliance</h3>
+            <p class="text-slate-400 leading-relaxed">OSHA protocols enforced by seasoned supervisors. Safe, clean, by-the-book execution.</p>
+          </div>
+          <div class="border border-white/10 p-6 hover:bg-white/5 transition-colors">
+            <div class="text-accent font-black text-2xl mb-4 border-b border-white/20 pb-3 inline-block">02</div>
+            <h3 class="text-xl font-bold text-white mb-3">Uncompromising Workmanship</h3>
+            <p class="text-slate-400 leading-relaxed">From cable management to PIM testing—premium, inspection-ready product every time.</p>
+          </div>
+          <div class="border border-white/10 p-6 hover:bg-white/5 transition-colors">
+            <div class="text-accent font-black text-2xl mb-4 border-b border-white/20 pb-3 inline-block">03</div>
+            <h3 class="text-xl font-bold text-white mb-3">Direct Communication</h3>
+            <p class="text-slate-400 leading-relaxed">No middlemen. Direct access to leadership and lead installers—full transparency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="py-12 relative z-10 bg-transparent">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-black text-primary mb-4">Partner With RyComm on Your Next Deployment</h3>
+        <p class="text-slate-600 text-lg mb-8">Experienced field crews that deliver on schedule and within budget.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="mailto:info@rycommtechnologies.com" class="inline-flex justify-center items-center w-full sm:w-[260px] px-8 py-4 text-sm font-bold bg-secondary text-white hover:bg-primary transition-colors uppercase tracking-wide">Email Leadership</a>
+          <a href="services.html" data-route="services" class="w-full sm:w-[260px] px-8 py-4 text-sm font-bold border border-slate-300 bg-white text-primary hover:bg-slate-50 transition-colors uppercase tracking-wide">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../scripts/navigation.js"></script>
+  <script src="../scripts/particles.js"></script>
+</body>
+</html>

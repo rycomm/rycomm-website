@@ -1,1 +1,54 @@
-
+[
+  {
+    "title": "Healthcare",
+    "badge": "Mission-Critical",
+    "badgeType": "default",
+    "description": "Zero-disruption installs supporting life-safety and clinical workflows.",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+    "bullets": [
+      "Structured cabling & MDF/IDF in active facilities",
+      "Public Safety DAS / ERRCS",
+      "Access control, CCTV, nurse-call pathways",
+      "After-hours and phased coordination"
+    ]
+  },
+  {
+    "title": "Education",
+    "badge": "Campus-Scale",
+    "badgeType": "default",
+    "description": "Clean infrastructure for wireless, security, and classroom tech under tight break windows.",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop",
+    "bullets": [
+      "Campus copper & fiber backbone",
+      "WAP and switch deployments",
+      "Access control and video surveillance",
+      "Public safety radio coverage"
+    ]
+  },
+  {
+    "title": "Commercial & Hospitality",
+    "badge": "High-Traffic",
+    "badgeType": "default",
+    "description": "Reliable wireless, security, and structured cabling that performs and looks clean.",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+    "bullets": [
+      "Enterprise DAS and in-building wireless",
+      "Structured cabling and pathways",
+      "Access control, CCTV, door hardware",
+      "Clean closeout for owner handover"
+    ]
+  },
+  {
+    "title": "Public Safety & Government",
+    "badge": "Life Safety",
+    "badgeType": "danger",
+    "description": "Code-compliant ERRCS and installs that pass AHJ inspections the first time.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop",
+    "bullets": [
+      "Public Safety DAS / ERRCS (NFPA & IFC)",
+      "2-way radio systems and BDA",
+      "Fire-rated cabling and NEMA enclosures",
+      "Pre-testing and inspection walkthroughs"
+    ]
+  }
+]

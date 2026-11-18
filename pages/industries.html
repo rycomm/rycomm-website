@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries We Serve | RyComm Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../styles/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body data-page="industries" class="font-sans text-slate-800 min-h-screen flex flex-col relative">
 
+  <!-- Particles Background Container -->
+  <div id="particles-js"></div>
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-grow relative z-10 page-fade">
+
+    <!-- Page Hero -->
+    <div class="hero-page min-h-[40vh] flex items-center py-12" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop');">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">Sectors</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">Industries We Serve</h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">Focused field installation where reliability, compliance, and clean execution matter most.</p>
+      </div>
+    </div>
+
+    <!-- Intro Bar -->
+    <div class="bg-white border-b border-slate-200 py-10">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <p class="text-slate-600 text-lg md:text-xl font-light">Partner to GCs and Prime Integrators across healthcare, education, commercial, and public-safety environments.</p>
+      </div>
+    </div>
+
+    <!-- Industries Grid (Loaded from data/industries.json) -->
+    <div class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div id="industries-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="py-12 relative z-10 bg-transparent border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-black text-primary mb-4">Have a project in one of these sectors?</h3>
+        <p class="text-slate-600 text-lg mb-8">Share your drawings and scope. We’ll confirm fit and next steps quickly.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="contact.html" data-route="contact" class="w-full sm:w-[260px] px-8 py-4 text-sm font-bold bg-secondary text-white hover:bg-primary transition-colors uppercase tracking-wide">Contact Leadership</a>
+          <a href="services.html" data-route="services" class="w-full sm:w-[260px] px-8 py-4 text-sm font-bold border border-slate-300 bg-white text-primary hover:bg-slate-50 transition-colors uppercase tracking-wide">View Full Services</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../scripts/navigation.js"></script>
+  <script src="../scripts/particles.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const grid = document.getElementById('industries-grid');
+      if (!grid) return;
+
+      try {
+        const res = await fetch('../data/industries.json');
+        if (!res.ok) return;
+        const industries = await res.json();
+
+        grid.innerHTML = industries.map(item => {
+          const badgeClass = item.badgeType === 'danger'
+            ? 'bg-red-50 text-red-700 border-red-100'
+            : 'bg-slate-100 text-slate-600 border-slate-200';
+
+          const bulletsHtml = item.bullets.map(b => `
+            <li class="flex gap-2"><span class="text-accent font-bold">›</span> ${b}</li>
+          `).join('');
+
+          return `
+            <article class="bg-white border border-slate-200 overflow-hidden flex flex-col group hover:shadow-xl transition-shadow">
+              <div class="aspect-[16/9] overflow-hidden relative">
+                <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105" alt="${item.title}">
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex justify-between items-start gap-3 mb-4">
+                  <h2 class="text-2xl font-black text-primary">${item.title}</h2>
+                  <span class="text-[10px] font-bold uppercase tracking-wider ${badgeClass} px-3 py-1 border shrink-0">${item.badge}</span>
+                </div>
+                <p class="text-slate-600 mb-6 flex-grow">${item.description}</p>
+                <ul class="text-sm text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">${bulletsHtml}</ul>
+                <a href="services.html" data-route="services" class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-primary uppercase tracking-wide">
+                  View related services
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
+            </article>
+          `;
+        }).join('');
+
+        if (typeof window.wireRoutes === 'function') {
+          window.wireRoutes();
+        }
+      } catch (err) {
+        console.error('Could not load industries:', err);
+      }
+    });
+  </script>
+</body>
+</html>

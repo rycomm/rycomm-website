@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RyComm Technologies | Field Execution Partner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="styles/tailwind.config.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="home" class="font-sans text-slate-800 min-h-screen flex flex-col relative">
 
+  <!-- Particles Background Container -->
+  <div id="particles-js"></div>
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-grow relative z-10 page-fade">
+
+    <!-- Hero Banner -->
+    <div class="hero-home min-h-[75vh] flex items-center py-20">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            <p class="text-accent font-bold text-xs uppercase tracking-widest">Low Voltage Installation Services</p>
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6 leading-[1.1]">
+            Connecting Tomorrow’s <br/> Infrastructure, <span class="text-accent">Today.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-light">
+            Specialized field installation for low-voltage systems: structured cabling, wireless, public safety DAS, access control, and CCTV—delivered compliant and inspection-ready.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="pages/contact.html" data-route="contact" class="w-full sm:w-[260px] px-8 py-4 text-sm font-bold text-white bg-transparent border border-transparent hover:bg-accent hover:text-primary transition-all duration-300 hover-jiggle uppercase tracking-wide">Connect With Us</a>
+            <a href="pages/services.html" data-route="services" class="w-full sm:w-[260px] px-8 py-4 text-sm font-bold text-white bg-transparent border border-transparent hover:bg-accent hover:text-primary transition-all duration-300 hover-jiggle uppercase tracking-wide">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Value Props -->
+    <div class="bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          <div class="pt-6 md:pt-0 md:pr-10">
+            <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-wide">Precision Execution</h3>
+            <p class="text-slate-600 leading-relaxed">Clean, code-compliant field installations delivered to exact project specs for GCs and prime integrators.</p>
+          </div>
+          <div class="pt-6 md:pt-0 md:px-10">
+            <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-wide">Inspection-Ready</h3>
+            <p class="text-slate-600 leading-relaxed">Complete test packets, as-builts, and photo documentation delivered on time for smooth inspections and SOW sign-off.</p>
+          </div>
+          <div class="pt-6 md:pt-0 md:pl-10">
+            <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-wide">On Schedule</h3>
+            <p class="text-slate-600 leading-relaxed">Disciplined crews, proactive communication, and dependable milestone tracking—keeping your build moving with zero surprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Install Carousel -->
+    <div class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-sm font-bold text-secondary uppercase tracking-widest mb-2">Field Services</h2>
+          <h3 class="text-3xl md:text-4xl font-black text-primary tracking-tight">What We Install</h3>
+        </div>
+        <p class="text-slate-600 md:text-right max-w-md">
+          Specialized installation crews supporting GCs and prime integrators across low-voltage, wireless, life-safety, and access control.
+        </p>
+      </div>
+      
+      <div class="relative group carousel-container">
+        <button type="button" class="carousel-nav-btn -left-5 lg:-left-6" onclick="scrollCarousel(-1)" aria-label="Scroll left">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+
+        <!-- Populated automatically from data/carousel-items.json -->
+        <div id="tech-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 hide-scrollbar scroll-smooth"></div>
+
+        <button type="button" class="carousel-nav-btn -right-5 lg:-right-6" onclick="scrollCarousel(1)" aria-label="Scroll right">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- How We Deliver -->
+    <div class="bg-primary text-white py-12 md:py-16 border-t-4 border-accent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">FIELD EXECUTION</h2>
+          <h3 class="text-3xl md:text-4xl font-black mb-4">Our Process</h3>
+          <p class="text-slate-400 max-w-2xl mx-auto">A disciplined, step-by-step approach from blueprint review to final turnover, ensuring clean execution and AHJ compliance at every phase.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="border border-white/10 bg-white/5 p-8 relative hover:bg-white/10 transition-colors">
+            <div class="text-5xl font-black text-white/10 absolute top-4 right-6">01</div>
+            <h4 class="text-xl font-bold text-white mb-3 mt-4">Blueprint & Scope Review</h4>
+            <p class="text-sm text-slate-300">SOW, engineering drawings, iBwave layouts, and material staging coordination.</p>
+          </div>
+          <div class="border border-white/10 bg-white/5 p-8 relative hover:bg-white/10 transition-colors">
+            <div class="text-5xl font-black text-white/10 absolute top-4 right-6">02</div>
+            <h4 class="text-xl font-bold text-white mb-3 mt-4">Compliant Execution</h4>
+            <p class="text-sm text-slate-300">OSHA-certified crews, clean physical installs, and strict adherence to AHJ codes.</p>
+          </div>
+          <div class="border border-white/10 bg-white/5 p-8 relative hover:bg-white/10 transition-colors">
+            <div class="text-5xl font-black text-white/10 absolute top-4 right-6">03</div>
+            <h4 class="text-xl font-bold text-white mb-3 mt-4">Testing & Certification</h4>
+            <p class="text-sm text-slate-300">Fluke copper, OTDR, PIM, and RF line-sweep testing for full physical-layer validation.</p>
+          </div>
+          <div class="border border-white/10 bg-white/5 p-8 relative hover:bg-white/10 transition-colors">
+            <div class="text-5xl font-black text-white/10 absolute top-4 right-6">04</div>
+            <h4 class="text-xl font-bold text-white mb-3 mt-4">Turnkey Closeout</h4>
+            <p class="text-sm text-slate-300">Complete test reports, marked-up as-builts, and photo logs for seamless GC and integrator turnover.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared CTA Banner -->
+    <div id="site-cta"></div>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/carousel.js"></script>
+  <script src="scripts/particles.js"></script>
+</body>
+</html>
